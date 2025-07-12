@@ -30,39 +30,46 @@ A full-stack web application to:
 
 ## 🧾 Data Model
 
-### 🧑‍💼 Employee Table
+### 🧑‍💼 Employee Table Fields
 
-| Column Name       | Type        | Description                                 |
-|-------------------|-------------|---------------------------------------------|
-| `id`              | UUID (PK)   | Unique employee ID                          |
-| `name`            | TEXT        | Full name                                   |
-| `email`           | TEXT        | Unique, contact email                       |
-| `mobile`          | TEXT        | Saudi phone number                          |
-| `position`        | TEXT        | Job title                                   |
-| `salary`          | NUMERIC     | Monthly salary                              |
-| `iqama_number`    | TEXT        | Saudi residence ID                          |
-| `iqama_expiry`    | DATE        | Iqama expiration date                       |
-| `birth_date`      | DATE        | Date of birth                               |
-| `city`            | TEXT        | City of residence                           |
-| `start_date`      | DATE        | Employment start date                       |
-| `transfer_count`  | INTEGER     | Iqama transfer count                        |
-| `status`          | TEXT        | Custom status                               |
-| `cv_url`          | TEXT        | Path to CV                                  |
-| `company_id`      | UUID (FK)   | Assigned company (nullable)                 |
-| `is_rented`       | BOOLEAN     | Whether rented                              |
-| `interview_date`  | DATE        | Interview date (optional)                   |
-| `created_at`      | TIMESTAMP   | Record creation                             |
-| `updated_at`      | TIMESTAMP   | Record update                               |
+> ✅ *Updated to include optional fields: `iban` and `kafala_status`*
 
-### 🏢 Company Table
 
-| Column Name       | Type        | Description                                 |
-|-------------------|-------------|---------------------------------------------|
-| `id`              | UUID (PK)   | Unique company ID                           |
-| `name`            | TEXT        | Company name                                |
-| `industry`        | TEXT        | Sector/industry                             |
-| `created_at`      | TIMESTAMP   | Record creation                             |
-| `updated_at`      | TIMESTAMP   | Record update                               |
+| Field Name         | Type      | Description                                       |
+|--------------------|-----------|---------------------------------------------------|
+| `id`               | UUID      | Unique primary key                                |
+| `name`             | TEXT      | Full employee name                                |
+| `email`            | TEXT      | Unique email address                              |
+| `mobile`           | TEXT      | Mobile phone number                               |
+| `position`         | TEXT      | Job title or role (e.g., Barista, Kitchen Staff)  |
+| `salary`           | NUMERIC   | Monthly salary (SAR)                              |
+| `iqama_number`     | TEXT      | Saudi residence ID (Iqama)                        |
+| `iqama_expiry`     | DATE      | Expiry date of the Iqama                          |
+| `birth_date`       | DATE      | Date of birth                                     |
+| `city`             | TEXT      | City (e.g., Riyadh)                               |
+| `start_date`       | DATE      | Work start date                                   |
+| `transfer_count`   | INTEGER   | Number of times the iqama was transferred         |
+| `status`           | TEXT      | Custom status (e.g., "in housing", "pending")     |
+| `cv_url`           | TEXT      | File path or URL to the uploaded CV               |
+| `company_id`       | UUID      | Foreign key to company (nullable if not rented)   |
+| `is_rented`        | BOOLEAN   | Whether employee is currently rented              |
+| `interview_date`   | DATE      | Date of interview (optional)                      |
+| `created_at`       | TIMESTAMP | Auto-generated on insert                          |
+| `updated_at`       | TIMESTAMP | Auto-updated on changes                           |
+| `iban`             | TEXT      | IBAN number for salary deposit (optional)         |
+| `kafala_status`    | TEXT      | Status of sponsorship transfer (optional)         |
+
+---
+
+### 🏢 Company Table Fields
+
+| Field Name       | Type      | Description                              |
+|------------------|-----------|------------------------------------------|
+| `id`             | UUID      | Unique primary key                       |
+| `name`           | TEXT      | Company name                             |
+| `industry`       | TEXT      | Type of business (optional)              |
+| `created_at`     | TIMESTAMP | Auto-generated on insert                 |
+| `updated_at`     | TIMESTAMP | Auto-updated on changes                  |
 
 ---
 
@@ -164,4 +171,6 @@ client/
 ## ✅ Next Steps
 
 You can now:
-- Review with Ahmad 
+- Scaffold backend (Express + Prisma)
+- Build React UI with filters & search
+- Deploy backend & frontend
