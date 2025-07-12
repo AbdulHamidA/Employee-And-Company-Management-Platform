@@ -170,7 +170,5 @@ client/
 
 ## ✅ Next Steps
 
-You can now:
-- Scaffold backend (Express + Prisma)
-- Build React UI with filters & search
-- Deploy backend & frontend
+
+-Review With Ahmad
