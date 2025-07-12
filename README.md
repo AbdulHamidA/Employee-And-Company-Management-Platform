@@ -164,4 +164,4 @@ client/
 ## ✅ Next Steps
 
 You can now:
-- review with Ahmad 
+- Review with Ahmad 
