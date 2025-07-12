@@ -170,5 +170,72 @@ client/
 
 ## ✅ Next Steps
 
+You can now:
+- Review with Ahmad
 
--Review With Ahmad
+---
+
+## 🔐 Authentication & User Roles
+
+- Admin login via email + password
+- JWT-based authentication for web & mobile
+- Protected backend routes for authenticated users
+- Optional roles (e.g., admin, viewer) for future use
+
+---
+
+## 📁 Document Management
+
+- Upload multiple documents per employee
+- Each document includes:
+  - Type (e.g., CV, Iqama, Contract)
+  - Upload date
+  - File path or URL
+- Download and preview options from frontend
+- Optional: Document tagging
+
+---
+
+## ⏰ Alerts & Notifications
+
+- Notify admin when:
+  - Iqama expiry is near (configurable threshold)
+  - Employee is returned or contract ends
+- In-app notifications (web/mobile)
+- Optional email notifications
+
+---
+
+## 🧾 Audit Logging
+
+- Track all admin actions:
+  - Create/edit/delete employee
+  - Rent/return employee
+  - Upload/delete documents
+- Store timestamp + actor + action
+- Optional: Audit viewer in admin dashboard
+
+---
+
+## 📊 Admin Dashboard
+
+- Summary cards:
+  - Total employees
+  - Total rented
+  - Total available
+  - Total companies
+- Optional charts:
+  - Employees per company
+  - Rentals per week/month
+- Quick links to filtered views
+
+---
+
+## 📤 Export & Print
+
+- Export employee and company lists to:
+  - CSV
+  - PDF (with optional branding)
+- Printable reports for:
+  - Individual employee profile
+  - Company and rented employee list
